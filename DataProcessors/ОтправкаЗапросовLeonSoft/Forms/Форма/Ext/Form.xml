@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="ИДОбъект" id="15">
+			<DataPath>ИДОбъект</DataPath>
+			<ContextMenu name="ИДОбъектКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ИДОбъектРасширеннаяПодсказка" id="17"/>
+		</InputField>
+		<InputField name="ДатаПериод" id="1">
+			<DataPath>ДатаПериод</DataPath>
+			<ContextMenu name="ДатаПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДатаПериодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<Button name="ЗапросПолучитьРейсы" id="4">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ЗапросПолучитьРейсы</CommandName>
+			<ExtendedTooltip name="ЗапросПолучитьРейсыРасширеннаяПодсказка" id="5"/>
+		</Button>
+		<Button name="ЗапросОбменЛеон" id="6">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ЗапросОбменЛеон</CommandName>
+			<ExtendedTooltip name="ЗапросОбменЛеонРасширеннаяПодсказка" id="7"/>
+		</Button>
+		<Button name="ЗапросИзмененияРейсов" id="8">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ЗапросИзмененияРейсов</CommandName>
+			<ExtendedTooltip name="ЗапросИзмененияРейсовРасширеннаяПодсказка" id="9"/>
+		</Button>
+		<Button name="ЗапросПоЭЛ" id="10">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ЗапросПоЭЛ</CommandName>
+			<ExtendedTooltip name="ЗапросПоЭЛРасширеннаяПодсказка" id="11"/>
+		</Button>
+		<UsualGroup name="ГруппаКомандыЗапрросаТекста" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды запрроса текста</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды запрроса текста</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыЗапрросаТекстаРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<Button name="ОтправитьЗапрос" id="24">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОтправитьЗапрос</CommandName>
+					<ExtendedTooltip name="ОтправитьЗапросРасширеннаяПодсказка" id="25"/>
+				</Button>
+				<CheckBoxField name="ВыбратьИзСправочника" id="21">
+					<DataPath>ВыбратьИзСправочника</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыбратьИзСправочникаКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ВыбратьИзСправочникаРасширеннаяПодсказка" id="23"/>
+					<Events>
+						<Event name="OnChange">ВыбратьИзСправочникаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ТекстВыбранногоЗапроса" id="18">
+			<DataPath>ТекстВыбранногоЗапроса</DataPath>
+			<Visible>false</Visible>
+			<ContextMenu name="ТекстВыбранногоЗапросаКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="ТекстВыбранногоЗапросаРасширеннаяПодсказка" id="20"/>
+		</InputField>
+		<InputField name="ВнешнийСервис" id="28">
+			<DataPath>ВнешнийСервис</DataPath>
+			<ContextMenu name="ВнешнийСервисКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ВнешнийСервисРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<TextDocumentField name="ЗапросТекст" id="12">
+			<DataPath>ЗапросТекст</DataPath>
+			<Height>3</Height>
+			<VerticalStretch>false</VerticalStretch>
+			<ContextMenu name="ЗапросТекстКонтекстноеМеню" id="13"/>
+			<ExtendedTooltip name="ЗапросТекстРасширеннаяПодсказка" id="14"/>
+		</TextDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ОтправкаЗапросовLeonSoft</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДатаПериод" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗапросТекст" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос текст</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИДОбъект" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИДОбъект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстВыбранногоЗапроса" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст выбранного запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ТекстЗапросовЛеон</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыбратьИзСправочника" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать из справочника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВнешнийСервис" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внешний сервис</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВнешниеСервисы</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗапросИзмененияРейсов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос изменения рейсов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос изменения рейсов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапросИзмененияРейсов</Action>
+		</Command>
+		<Command name="ЗапросОбменЛеон" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос обмен леон</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос обмен леон</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапросОбменЛеон</Action>
+		</Command>
+		<Command name="ЗапросПолучитьРейсы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос получить рейсы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос получить рейсы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапросПолучитьРейсы</Action>
+		</Command>
+		<Command name="ЗапросПоЭЛ" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос по ЭЛ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос по ЭЛ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапросПоЭЛ</Action>
+		</Command>
+		<Command name="ОтправитьЗапрос" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить запрос</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить запрос</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьЗапрос</Action>
+		</Command>
+	</Commands>
+</Form>

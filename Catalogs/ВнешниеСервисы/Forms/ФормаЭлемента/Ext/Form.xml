@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<CheckBoxField name="ИспользоватьСервис" id="7">
+			<DataPath>Объект.ИспользоватьСервис</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИспользоватьСервисКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ИспользоватьСервисРасширеннаяПодсказка" id="9"/>
+		</CheckBoxField>
+		<InputField name="АдресАпи" id="10">
+			<DataPath>Объект.АдресАпи</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="АдресАпиКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="АдресАпиРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<CheckBoxField name="ИспользоватьБазовуюАутентификацию" id="13">
+			<DataPath>Объект.ИспользоватьБазовуюАутентификацию</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИспользоватьБазовуюАутентификациюКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ИспользоватьБазовуюАутентификациюРасширеннаяПодсказка" id="15"/>
+		</CheckBoxField>
+		<InputField name="ИмяПользователя" id="16">
+			<DataPath>Объект.ИмяПользователя</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИмяПользователяКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ИмяПользователяРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<Table name="ЗащищенныеДанные" id="19">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ЗащищенныеДанные</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЗащищенныеДанныеКонтекстноеМеню" id="20"/>
+			<AutoCommandBar name="ЗащищенныеДанныеКоманднаяПанель" id="21"/>
+			<ExtendedTooltip name="ЗащищенныеДанныеРасширеннаяПодсказка" id="22"/>
+			<SearchStringAddition name="ЗащищенныеДанныеСтрокаПоиска" id="23">
+				<AdditionSource>
+					<Item>ЗащищенныеДанные</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗащищенныеДанныеСтрокаПоискаКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ЗащищенныеДанныеСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗащищенныеДанныеСостояниеПросмотра" id="26">
+				<AdditionSource>
+					<Item>ЗащищенныеДанные</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗащищенныеДанныеСостояниеПросмотраКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="ЗащищенныеДанныеСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗащищенныеДанныеУправлениеПоиском" id="29">
+				<AdditionSource>
+					<Item>ЗащищенныеДанные</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗащищенныеДанныеУправлениеПоискомКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="ЗащищенныеДанныеУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Drag">ЗащищенныеДанныеПеретаскивание</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ЗащищенныеДанныеНомерСтроки" id="32">
+					<DataPath>Объект.ЗащищенныеДанные.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗащищенныеДанныеНомерСтрокиКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ЗащищенныеДанныеНомерСтрокиРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+				<InputField name="ЗащищенныеДанныеИмяДанных" id="35">
+					<DataPath>Объект.ЗащищенныеДанные.ИмяДанных</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗащищенныеДанныеИмяДанныхКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ЗащищенныеДанныеИмяДанныхРасширеннаяПодсказка" id="37"/>
+					<Events>
+						<Event name="TextEditEnd">ЗащищенныеДанныеИмяДанныхОкончаниеВводаТекста</Event>
+					</Events>
+				</InputField>
+				<InputField name="ЗащищенныеДанныеЗначение" id="38">
+					<DataPath>Объект.ЗащищенныеДанные.Значение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<PasswordMode>true</PasswordMode>
+					<ContextMenu name="ЗащищенныеДанныеЗначениеКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ЗащищенныеДанныеЗначениеРасширеннаяПодсказка" id="40"/>
+					<Events>
+						<Event name="TextEditEnd">ЗащищенныеДанныеЗначениеОкончаниеВводаТекста</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ВнешниеСервисы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Объект.ЗащищенныеДанные">
+					<Column name="Значение" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Значение</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

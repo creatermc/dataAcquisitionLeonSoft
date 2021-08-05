@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.9">
+	<ConfigVersions>
+		<Metadata name="Catalog.ВнешниеСервисы" id="253e4c44-f4fc-11eb-3f91-b42e9905bfa2" configVersion="3ca2870629f5eb113f91b42e9905bfa200000000">
+			<Metadata name="Catalog.ВнешниеСервисы.TabularSection.ЗащищенныеДанные" id="1768b258-f51f-11eb-3f91-b42e9905bfa2"/>
+			<Metadata name="Catalog.ВнешниеСервисы.TabularSection.ЗащищенныеДанные.Attribute.ИмяДанных" id="2ba69078-f51f-11eb-3f91-b42e9905bfa2"/>
+			<Metadata name="Catalog.ВнешниеСервисы.Attribute.ИспользоватьСервис" id="439456de-f4fc-11eb-3f91-b42e9905bfa2"/>
+			<Metadata name="Catalog.ВнешниеСервисы.Attribute.АдресАпи" id="4ca8fce8-f4fc-11eb-3f91-b42e9905bfa2"/>
+			<Metadata name="Catalog.ВнешниеСервисы.Attribute.ИспользоватьБазовуюАутентификацию" id="56ff6ec0-f4fc-11eb-3f91-b42e9905bfa2"/>
+			<Metadata name="Catalog.ВнешниеСервисы.Attribute.ИмяПользователя" id="6129cee0-f4fc-11eb-3f91-b42e9905bfa2"/>
+		</Metadata>
+		<Metadata name="Catalog.ВнешниеСервисы.Form.ФормаЭлемента" id="5d37bd74-f51f-11eb-3f91-b42e9905bfa2" configVersion="9e73891b2ff5eb113f91b42e9905bfa200000000"/>
+		<Metadata name="Catalog.ВнешниеСервисы.Form.ФормаЭлемента.Form" id="5d37bd74-f51f-11eb-3f91-b42e9905bfa2.0" configVersion="ecfd881b2ff5eb113f91b42e9905bfa200000000"/>
+		<Metadata name="Catalog.ЗапросыЛеонСофтваре" id="f80a3b0c-f460-11eb-3f91-b42e9905bfa2" configVersion="10377f821ff5eb113f91b42e9905bfa200000000">
+			<Metadata name="Catalog.ЗапросыЛеонСофтваре.Attribute.Запрос" id="06f571ae-f461-11eb-3f91-b42e9905bfa2"/>
+			<Metadata name="Catalog.ЗапросыЛеонСофтваре.Attribute.Примечание" id="0fcbb482-f461-11eb-3f91-b42e9905bfa2"/>
+			<Metadata name="Catalog.ЗапросыЛеонСофтваре.Attribute.ЗапросДляОтправки" id="4f1e908c-f461-11eb-3f91-b42e9905bfa2"/>
+			<Metadata name="Catalog.ЗапросыЛеонСофтваре.Attribute.ИсходнаяСсылка" id="720af432-f461-11eb-3f91-b42e9905bfa2"/>
+		</Metadata>
+		<Metadata name="Catalog.ЗапросыЛеонСофтваре.Form.ФормаСписка" id="a24f9ad0-f466-11eb-3f91-b42e9905bfa2" configVersion="c09aa9b266f4eb113f91b42e9905bfa200000000"/>
+		<Metadata name="Catalog.ЗапросыЛеонСофтваре.Form.ФормаСписка.Form" id="a24f9ad0-f466-11eb-3f91-b42e9905bfa2.0" configVersion="0083a9b266f4eb113f91b42e9905bfa200000000"/>
+		<Metadata name="Catalog.ЗапросыЛеонСофтваре.Form.ФормаЭлемента" id="2cf44b28-f461-11eb-3f91-b42e9905bfa2" configVersion="009ec7e766f4eb113f91b42e9905bfa200000000"/>
+		<Metadata name="Catalog.ЗапросыЛеонСофтваре.Form.ФормаЭлемента.Form" id="2cf44b28-f461-11eb-3f91-b42e9905bfa2.0" configVersion="6831c7e766f4eb113f91b42e9905bfa200000000"/>
+		<Metadata name="Catalog.ТекстЗапросовЛеон" id="bd1371db-f514-11eb-3f91-b42e9905bfa2" configVersion="76ec40ea39f5eb11a88cb42e9905bfa200000000">
+			<Metadata name="Catalog.ТекстЗапросовЛеон.Attribute.Комментарий" id="278c84e6-f517-11eb-3f91-b42e9905bfa2"/>
+			<Metadata name="Catalog.ТекстЗапросовЛеон.Attribute.ТекстЗапроса" id="f8b65568-f514-11eb-3f91-b42e9905bfa2"/>
+		</Metadata>
+		<Metadata name="Catalog.ТекстЗапросовЛеон.Form.ФормаЭлемента" id="db6df4c8-f539-11eb-a88c-b42e9905bfa2" configVersion="4c805b2e3af5eb11a88cb42e9905bfa200000000"/>
+		<Metadata name="Catalog.ТекстЗапросовЛеон.Form.ФормаЭлемента.Form" id="db6df4c8-f539-11eb-a88c-b42e9905bfa2.0" configVersion="a05e5b2e3af5eb11a88cb42e9905bfa200000000"/>
+		<Metadata name="CommonModule.LeonSoftwareCommonModules" id="facc4998-f4fb-11eb-3f91-b42e9905bfa2" configVersion="5aa993343df5eb11a88cb42e9905bfa200000000"/>
+		<Metadata name="CommonModule.LeonSoftwareCommonModules.Module" id="facc4998-f4fb-11eb-3f91-b42e9905bfa2.0" configVersion="7c5f93343df5eb11a88cb42e9905bfa200000000"/>
+		<Metadata name="CommonModule.КоннекторHTTP" id="8c6f4e7e-f504-11eb-3f91-b42e9905bfa2" configVersion="da6a329c04f5eb113f91b42e9905bfa200000000"/>
+		<Metadata name="CommonModule.КоннекторHTTP.Module" id="8c6f4e7e-f504-11eb-3f91-b42e9905bfa2.0" configVersion="fa7d739b04f5eb113f91b42e9905bfa200000000"/>
+		<Metadata name="CommonModule.ОбщегоНазначения" id="da10db36-f502-11eb-3f91-b42e9905bfa2" configVersion="9c1a0adf27f5eb113f91b42e9905bfa200000000"/>
+		<Metadata name="CommonModule.ОбщегоНазначения.Module" id="da10db36-f502-11eb-3f91-b42e9905bfa2.0" configVersion="e4dc09df27f5eb113f91b42e9905bfa200000000"/>
+		<Metadata name="CommonModule.ОбщегоНазначенияКлиентСервер" id="73089e5a-f503-11eb-3f91-b42e9905bfa2" configVersion="9a2325eb03f5eb113f91b42e9905bfa200000000"/>
+		<Metadata name="CommonModule.ОбщегоНазначенияКлиентСервер.Module" id="73089e5a-f503-11eb-3f91-b42e9905bfa2.0" configVersion="82c324eb03f5eb113f91b42e9905bfa200000000"/>
+		<Metadata name="CommonModule.ОбщегоНазначенияПовтИсп" id="42efabf0-f503-11eb-3f91-b42e9905bfa2" configVersion="5e356faa24f5eb113f91b42e9905bfa200000000"/>
+		<Metadata name="CommonModule.ОбщегоНазначенияПовтИсп.Module" id="42efabf0-f503-11eb-3f91-b42e9905bfa2.0" configVersion="04266faa24f5eb113f91b42e9905bfa200000000"/>
+		<Metadata name="CommonModule.РаботаСВнешнимиСервисамиПовтИсп" id="7d4215ec-f4fc-11eb-3f91-b42e9905bfa2" configVersion="54c5481d02f5eb113f91b42e9905bfa200000000"/>
+		<Metadata name="CommonModule.РаботаСВнешнимиСервисамиПовтИсп.Module" id="7d4215ec-f4fc-11eb-3f91-b42e9905bfa2.0" configVersion="94a8481d02f5eb113f91b42e9905bfa200000000"/>
+		<Metadata name="CommonModule.СтроковыеФункцииКлиентСервер" id="e7a503c0-f503-11eb-3f91-b42e9905bfa2" configVersion="b0c4a07104f5eb113f91b42e9905bfa200000000"/>
+		<Metadata name="CommonModule.СтроковыеФункцииКлиентСервер.Module" id="e7a503c0-f503-11eb-3f91-b42e9905bfa2.0" configVersion="7244a07104f5eb113f91b42e9905bfa200000000"/>
+		<Metadata name="Configuration.Конфигурация" id="f41cf0ac-f460-11eb-3f91-b42e9905bfa2" configVersion="2437a0f828f5eb113f91b42e9905bfa200000000"/>
+		<Metadata name="DataProcessor.ОтправкаЗапросовLeonSoft" id="1b0895f2-f505-11eb-3f91-b42e9905bfa2" configVersion="f0d0946205f5eb113f91b42e9905bfa200000000"/>
+		<Metadata name="DataProcessor.ОтправкаЗапросовLeonSoft.Form.Форма" id="318c6e96-f505-11eb-3f91-b42e9905bfa2" configVersion="8e5b2e831df5eb113f91b42e9905bfa200000000"/>
+		<Metadata name="DataProcessor.ОтправкаЗапросовLeonSoft.Form.Форма.Form" id="318c6e96-f505-11eb-3f91-b42e9905bfa2.0" configVersion="92802d831df5eb113f91b42e9905bfa200000000"/>
+		<Metadata name="Enum.ВидТокена" id="c6982643-f528-11eb-3f91-b42e9905bfa2" configVersion="cec8c1952ef5eb113f91b42e9905bfa200000000">
+			<Metadata name="Enum.ВидТокена.EnumValue.ВремяТокена" id="d6f9aab0-f528-11eb-3f91-b42e9905bfa2"/>
+			<Metadata name="Enum.ВидТокена.EnumValue.ТокенОбновления" id="daece56a-f528-11eb-3f91-b42e9905bfa2"/>
+			<Metadata name="Enum.ВидТокена.EnumValue.ТокенАвторизации" id="e068bdd4-f528-11eb-3f91-b42e9905bfa2"/>
+			<Metadata name="Enum.ВидТокена.EnumValue.Токен" id="e53cb220-f528-11eb-3f91-b42e9905bfa2"/>
+		</Metadata>
+		<Metadata name="InformationRegister.БезопасноеХранилищеДанных" id="08b87d12-f527-11eb-3f91-b42e9905bfa2" configVersion="9eb8bb7927f5eb113f91b42e9905bfa200000000">
+			<Metadata name="InformationRegister.БезопасноеХранилищеДанных.Dimension.Владелец" id="3f4929a8-f527-11eb-3f91-b42e9905bfa2"/>
+			<Metadata name="InformationRegister.БезопасноеХранилищеДанных.Resource.Данные" id="55f34882-f527-11eb-3f91-b42e9905bfa2"/>
+		</Metadata>
+		<Metadata name="Language.Русский" id="f41cf6ec-f460-11eb-3f91-b42e9905bfa2" configVersion="9822ef0d61f4eb113f91b42e9905bfa200000000"/>
+	</ConfigVersions>
+</ConfigDumpInfo>
