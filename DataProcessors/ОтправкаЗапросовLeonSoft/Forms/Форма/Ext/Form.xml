@@ -95,8 +95,7 @@
 		</InputField>
 		<TextDocumentField name="ЗапросТекст" id="12">
 			<DataPath>ЗапросТекст</DataPath>
-			<Height>3</Height>
-			<VerticalStretch>false</VerticalStretch>
+			<Height>5</Height>
 			<ContextMenu name="ЗапросТекстКонтекстноеМеню" id="13"/>
 			<ExtendedTooltip name="ЗапросТекстРасширеннаяПодсказка" id="14"/>
 		</TextDocumentField>

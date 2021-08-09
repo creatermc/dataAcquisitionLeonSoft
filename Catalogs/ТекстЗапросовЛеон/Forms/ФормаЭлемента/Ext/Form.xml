@@ -3,34 +3,73 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
 	<ChildItems>
-		<InputField name="Код" id="1">
-			<DataPath>Объект.Code</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
-		</InputField>
-		<InputField name="Наименование" id="4">
-			<DataPath>Объект.Description</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
-		</InputField>
-		<InputField name="ТекстЗапроса" id="7">
-			<DataPath>Объект.ТекстЗапроса</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<HorizontalStretch>true</HorizontalStretch>
-			<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="8"/>
-			<ExtendedTooltip name="ТекстЗапросаРасширеннаяПодсказка" id="9"/>
-		</InputField>
-		<TextDocumentField name="Комментарий" id="10">
-			<DataPath>Объект.Комментарий</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<TextColor>web:MidnightBlue</TextColor>
-			<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
-			<ContextMenu name="КомментарийКонтекстноеМеню" id="11"/>
-			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="12"/>
-		</TextDocumentField>
+		<UsualGroup name="Группа1" id="13">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="15">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<InputField name="Код" id="1">
+							<DataPath>Объект.Code</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="Наименование" id="4">
+							<DataPath>Объект.Description</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="ТекстЗапроса" id="7">
+							<DataPath>Объект.ТекстЗапроса</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>#00622E</TextColor>
+							<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ТекстЗапросаРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<TextDocumentField name="Комментарий" id="10">
+							<DataPath>Объект.Комментарий</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<TextColor>web:MidnightBlue</TextColor>
+							<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="12"/>
+						</TextDocumentField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа3" id="17">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<Button name="СформироватьЗапрос" id="22">
+							<Type>UsualButton</Type>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<CommandName>Form.Command.СформироватьЗапрос</CommandName>
+							<ExtendedTooltip name="СформироватьЗапросРасширеннаяПодсказка" id="23"/>
+						</Button>
+						<TextDocumentField name="ИскходныйТекстДляФормированияЗапроса" id="19">
+							<DataPath>Объект.ИскходныйТекстДляФормированияЗапроса</DataPath>
+							<ContextMenu name="ИскходныйТекстДляФормированияЗапросаКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ИскходныйТекстДляФормированияЗапросаРасширеннаяПодсказка" id="21"/>
+						</TextDocumentField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -41,4 +80,21 @@
 			<SavedData>true</SavedData>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="СформироватьЗапрос" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать запрос</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать запрос</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьЗапрос</Action>
+		</Command>
+	</Commands>
 </Form>

@@ -405,6 +405,796 @@
 			Возврат Неопределено;
 		КонецЕсли;
 
-	Возврат Неопределено;
+	Возврат Ответ;
 
 КонецФункции
+
+// пример простых запросов на примере указанных в sample-queries
+//
+// https://bitbucket.org/leondevteam/api-documentation/src/master/sample-queries/
+//
+//////////////////////////// checklist /////////////////////////////////////////////////
+
+//{
+//  checklist {
+//    # get available checklist items (and available statuses list on single item) in OPS group
+//    getAvailableDefinitions(groupId: OPS) {
+//      groupId
+//      nid
+//      statuses {
+//        status
+//      }
+//    }
+//  }
+//  flight(flightNid: 18595001) {
+//    checklist {
+//      # get flight checklist items and status, set on single item
+//      allItems {
+//        cdNid
+//        csId
+//      }
+//    }
+//  }
+//}
+
+//mutation {
+//  checklist {
+//    # set status on flight checklist item (OPS group item)
+//    opsItemStatusUpdate(flightNid: 18595001, checklistItemNid: 1, checklistStatusId: "UNT")
+//  }
+//}
+
+
+//{
+//  flight(flightNid: 18595001) {
+//    checklist {
+//      # check single checklist item status
+//      item(cd_nid: 1) {
+//        cdNid,
+//        csId
+//      }
+//    }
+//  }
+//}
+
+
+////////////////////////////////// aircraftactivity  ///////////////////////////////////////////
+
+//query {
+//  aircraftActivities {
+//    activities(registration: "A-BCDE" ) {
+//      lift {
+//        aircraftTail
+//      }
+//      activities {
+//        activityId
+//        startAirport {
+//          code {
+//            icao
+//            iata
+//          }
+//        }
+//        endAirport {
+//          code {
+//            icao
+//            iata
+//          }
+//        }
+//        activityType
+//        paxCount
+//        startDateTime
+//        endDateTime
+//        handlers {
+//          name
+//        }
+//        isCanceled
+//        
+//      }
+//    }
+//  }
+//}
+
+//////////////////////////////////  calculatePrice ///////////////////////////////////////////
+
+//query calculatePrice($rfqPricing: RfqPricingInput!) {
+//  sales {
+//    getRfqPricing(rfqInput: $rfqPricing) {
+//      ... on RfqPricing {
+//        registration
+//        pricing {
+//          aircraftPrices {
+//            name
+//            quantity
+//            totalPrice
+//            unitPrice
+//          }
+//          airportPrices {
+//            name
+//            airport {
+//              code {
+//                icao
+//              }
+//            }
+//            quantity
+//            unitPrice
+//            totalPrice
+//          }
+//          currency
+//          quoteRoundedTo
+//          quoteRoundedPrice
+//        }
+//        __typename
+//      }
+//      ... on Error {
+//        message
+//        __typename
+//      }
+//    }
+//  }
+//}
+
+//Variables 
+
+//{
+//  "rfqPricing": {
+//    "itinerary":  [
+//      {"date":  "2020-09-26", "adep": "WAW", "ades": "KRK", "paxNumber": 3, "departureOrArrival": "departure", "time": "10:00"},
+//      {"date":  "2020-09-28", "adep": "KRK", "ades": "EPWA", "paxNumber": 3, "departureOrArrival": "arrival", "time": "10:00"}
+//    ],
+//		"aircraftRegistrationList": ["B-ARTI","D-LEON"]
+//  }
+//}
+
+
+
+//////////////////////////////////  confirmedFlights ////////////////////////////////  
+
+//query {
+//  flightList(filter: {
+//    timeInterval: {
+//      start: "2020-03-20"
+//      end: "2020-03-31"
+//    }
+//    flightStatus: CONFIRMED
+//  }) {
+//    flightNid
+//    status
+//    startTimeUTC
+//    startTimeLocal
+//    startTime
+//    endTime
+//    endTimeUTC
+//    endTimeLocal
+//    startAirport {
+//      code {
+//        icao
+//        iata
+//      }
+//      longitudeDec
+//      latitudeDec
+//      name
+//      city
+//      country
+//    }
+//    endAirport {
+//      code {
+//        icao
+//        iata
+//      }
+//      
+//      longitudeDec
+//      latitudeDec
+//      name
+//      city
+//      country
+//    }
+//    acft {
+//      registration
+//      acftType {
+//        iCAO
+//        iATA
+//      }
+//    }
+//    trip {
+//      client {
+//        name
+//        contactNid
+//        companyName
+//        companyNid
+//        allWorkEmails
+//      }
+//    }
+//    dist
+//    flightRules
+//    icaoType
+//    isCommercial
+//    isCnl
+//    passengerList {
+//      count
+//    }
+//  }
+//}
+
+
+
+//////////////////////////////////  createTripMutation ////////////////////////////////  
+
+
+//mutation {
+//  createTrip(
+//    trip: {
+//      flights: [
+//        {
+//          flightNo: "AB"
+//          aircraftNid: 6207
+//          startTimeUTC: "2020-05-16UTC17:00:00"
+//          endTimeUTC: "2020-05-16UTC20:13:53"
+//          adepCode: "EGGW"
+//          adesCode: "UUWW"
+//          isEmptyLeg: true
+//        }
+//        {
+//          flightNo: "BB"
+//          aircraftNid: 6207
+//          startTimeUTC: "2020-05-16UTC21:00:00"
+//          endTimeUTC: "2020-05-16UTC21:59:26"
+//          adepCode: "UUWW"
+//          adesCode: "ULLI"
+//          isEmptyLeg: false
+//        }
+//        {
+//          flightNo: "CC"
+//          aircraftNid: 6207
+//          startTimeUTC: "2020-05-17UTC01:00:00"
+//          endTimeUTC: "2020-05-17UTC03:46:15"
+//          adepCode: "ULLI"
+//          adesCode: "EGGW"
+//          isEmptyLeg: true
+//        }
+//      ]
+//    }
+//  ) {
+//    tripNid
+//    flightList{
+//      flightNid
+//      
+//    }
+//  }
+//}
+
+////////////////////////////////// crewAndPAXDocuments  //////////////////////////////// 
+
+//query {
+//  flightList(filter: {timeInterval: {
+//    start: "2020-05-10"
+//    end: "2020-05-20"
+//  }}) {
+//    flightNid
+//    flightNo
+//    startAirport {
+//      code {
+//        icao
+//        iata
+//      }
+//      name
+//      city
+//    }
+//    endAirport {
+//      code {
+//        icao
+//        iata
+//      }
+//      name
+//      city
+//    }
+//    acft {
+//      registration
+//      acftType {
+//        iCAO
+//      }
+//    }
+//    startTimeUTC
+//    startTimeLocal
+//    endTimeUTC
+//    endTimeLocal
+//    
+//    passengerList {
+//      passengerContactList {
+//        contact {
+//          name
+//          surname
+//          dateOfBirthString
+//        }
+//        departurePassport {
+//          number
+//          countryCode
+//          expiresDate
+//          dateOfIssueDate
+//        }
+//        arrivalPassport {
+//          number
+//          countryCode
+//          expiresDate
+//          dateOfIssueDate
+//        }
+//        departureNationalId {
+//          number
+//          countryCode
+//          expires
+//          dateOfIssue
+//        }
+//        arrivalNationalId {
+//          number
+//          countryCode
+//          expires
+//          dateOfIssue
+//        }
+//        
+//      }
+//      
+//    }
+//    
+//    crewList {
+//      position {
+//        posType
+//        name
+//        occupation
+//      }
+//      contact {
+//        name
+//        surname
+//        phoneWork
+//        allWorkEmails
+//      }
+//    	departurePassport {
+//        countryCode
+//        expiresDate
+//        number
+//        dateOfIssueDate
+//        
+//      }
+//      passport {
+//        countryCode
+//        expiresDate
+//        number
+//        dateOfIssueDate
+//      }
+//      
+//    }
+//  }
+//}
+
+////////////////////////////////// emptylegsquery //////////////////////////////// 
+
+//query {
+//  aircraftAvailability {
+//    emptyLegList(startTime: "2020-05-01") {
+//      flightNo
+//      startTimeUTC
+//      startTimeLocal 
+//      endTimeUTC
+//      endTimeLocal
+//      flightNid
+//      acft {
+//        registration
+//        acftType {
+//          iCAO
+//          name
+//        }
+//        paxCapacity
+//        paxRange(pax_number: 5)
+//        maxRangeWithNoPax
+//        maxRangeWithMaxPax
+//      }
+//      startAirport {
+//        code {
+//          icao
+//          iata
+//        }
+//        timezone {
+//          name
+//        }
+//        country
+//        city
+//        timezoneOffset
+//      }
+//      endAirport {
+//        code {
+//          icao
+//          iata
+//        }
+//        timezone {
+//          name
+//        }
+//        country
+//        city
+//        timezoneOffset
+//      }
+//      dist
+//      
+//    }
+//  }
+
+////////////////////////////////// flightsWithJL //////////////////////////////// 
+
+//query {
+//  flightList(filter: {
+//    timeInterval: {
+//      start: "2020-03-14"
+//      end: "2020-03-20"
+//    }
+//    flightStatus: CONFIRMED
+//  }) {
+//    flightNid
+//    status
+//    startTimeUTC
+//    startTimeLocal
+//    startTime
+//    endTime
+//    endTimeUTC
+//    endTimeLocal
+//    startAirport {
+//      code {
+//        icao
+//        iata
+//      }
+//      longitudeDec
+//      latitudeDec
+//      name
+//      city
+//      country
+//    }
+//    endAirport {
+//      code {
+//        icao
+//        iata
+//      }
+//      
+//      longitudeDec
+//      latitudeDec
+//      name
+//      city
+//      country
+//    }
+//    acft {
+//      registration
+//      acftType {
+//        iCAO
+//        iATA
+//      }
+//    }
+//    dist
+//    flightRules
+//    icaoType
+//    isCommercial
+//    isCnl
+//    passengerList {
+//      count
+//    }
+//    crewList {
+//      contact {
+//        name
+//        surname
+//        personCode
+//      }
+//      position {
+//        name
+//        posType
+//      }
+//    }
+//    journeyLog {
+//    	blockFuel
+//      usedFuel
+//      remainingFuel
+//      taxiFuel
+//      refuel
+//      fuelUnit
+//      weightUnit
+//      bag
+//      cargo
+//      atd
+//      ata
+//      nightTime
+//      paxCount
+//      paxMaleCount
+//      paxFemaleCount
+//      paxChildCount
+//      paxInfantCount
+//      startTime
+//      endTime
+//      distance
+//      flightLog
+//      startAirport {
+//        code {
+//          icao
+//          iata
+//        }
+//        name
+//        country
+//      }
+//       endAirport {
+//        code {
+//          icao
+//          iata
+//        }
+//        name
+//        country
+//    	}
+//     landingCount
+//     
+//    }
+//  }
+//}
+
+////////////////////////////////// flightswithcrew //////////////////////////////// 
+
+
+//query {
+//  flightList(filter: {timeInterval: {
+//    start: "2020-05-10"
+//    end: "2020-05-20"
+//  }}) {
+//    flightNid
+//    flightNo
+//    startAirport {
+//      code {
+//        icao
+//        iata
+//      }
+//      name
+//      city
+//    }
+//    endAirport {
+//      code {
+//        icao
+//        iata
+//      }
+//      name
+//      city
+//    }
+//    acft {
+//      registration
+//      acftType {
+//        iCAO
+//      }
+//    }
+//    startTimeUTC
+//    startTimeLocal
+//    endTimeUTC
+//    endTimeLocal
+//    crewList {
+//      position {
+//        posType
+//        name
+//        occupation
+//      }
+//      contact {
+//        name
+//        surname
+//        phoneWork
+//        allWorkEmails
+//      }
+//    }
+//  }
+
+////////////////////////////////// flightswithpricing //////////////////////////////// 
+
+//query {
+//  flightList(filter: {
+//    timeInterval: {
+//      start: "2020-10-28"
+//      end: "2020-11-01"
+//    }
+//  }) {
+//    status
+//    startTime
+//    endTime
+//    startAirport {
+//      code {
+//        icao
+//        iata
+//      }
+//      longitudeDec
+//      latitudeDec
+//      name
+//      city
+//      country
+//    }
+//    endAirport {
+//      code {
+//        icao
+//        iata
+//      }
+//      
+//      longitudeDec
+//      latitudeDec
+//      name
+//      city
+//      country
+//    }
+//    acft {
+//      registration
+//      acftType {
+//        iCAO
+//        iATA
+//      }
+//    }
+//    dist
+//    flightRules
+//    icaoType
+//    isCommercial
+//    isCnl
+//    passengerList {
+//      count
+//    }
+//    trip {
+//      salesInfo
+//      flightOrderNoFull
+//      quoteRealization {
+//        request {
+//          status {
+//            name
+//          }
+//          createdDate
+//          nid
+//          buyer {
+//            client {
+//              contact {
+//                name
+//              }
+//            }
+//            
+//          }
+//        }
+//        acft {
+//          registration
+//        },
+//        price
+//        currency
+//        isSubcharter
+//        legs {
+//          adep {
+//            code {
+//              icao
+//            }
+//          }
+//          ades {
+//            code {
+//              icao
+//            }
+//          }
+//        }
+//        providerPrice
+//        providerCurrency
+//        pricing {
+//          taxPrices {
+//            taxId
+//            quantity
+//            totalPrice
+//            unitPrice
+//            name
+//          }
+//          currency
+//          aircraftPrices {
+//            name
+//            quantity
+//            totalPrice
+//            unitPrice
+//          }
+//          airportPrices {
+//            name(airport_code: ICAO)
+//            totalPrice
+//            unitPrice
+//            quantity
+//            airport {
+//              code {
+//                icao
+//                iata
+//              }
+//            }
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
+
+//////////////////////////////////  maintenanceList ////////////////////////////////  
+
+//query {
+//  opsMaintenance {
+//    maintenanceList(
+//      timeInterval: { start: "01-05-2021", end: "31-05-2021" }
+//      aircraftList: [10547, 7177, 6795]
+//    ) {
+//      acftReservationNid
+//      startTimeUTC
+//      endTimeUTC
+//      startAirport {
+//        code {
+//          icao
+//          iata
+//        }
+//      }
+//      endAirport {
+//        code {
+//          icao
+//          iata
+//        }
+//      }
+//      notes
+//      status
+//      acft {
+//        registration
+//        acftNid
+//      }
+//    }
+//  }
+//}
+
+//////////////////////////////////  rfqs ////////////////////////////////  
+
+//query {
+//  sales {
+//    getQuoteRequestsList(limit: 100) {
+//      createdDate
+//      status {
+//        name
+//      }
+//      nid
+//      buyer {
+//        name
+//        email
+//        phone
+//        representative {
+//          contactNid
+//          name
+//          surname
+//          emailPrivate
+//          allWorkEmails
+//        }
+//      }
+//      realizations {
+//        acft {
+//          registration
+//          acftType {
+//            icao
+//          }
+//          category {
+//            categoryName
+//          }
+//        }
+//        price
+//        currency
+//        legs {
+//          adep {
+//            code {
+//              icao
+//              iata
+//            }
+//            name
+//            city
+//          }
+//          ades {
+//              code {
+//                icao
+//                iata
+//              }
+//              name
+//              city
+//          }
+//          blockTime
+//          flightTime
+//          stdLocal
+//          staLocal
+//          passengerList {
+//            count
+//          }
+//        	distanceNM
+//        }
+//      }
+//    }
+//  }
+//}
+
+//////////////////////////////////  

@@ -28,6 +28,17 @@
 			<ContextMenu name="ИспользоватьСервисКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="ИспользоватьСервисРасширеннаяПодсказка" id="9"/>
 		</CheckBoxField>
+		<LabelDecoration name="ДекорацияОписание" id="41">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес апи указывается без https:// и /api/graphql 
+указывается только yourOprId.leon.aero</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияОписаниеКонтекстноеМеню" id="42"/>
+			<ExtendedTooltip name="ДекорацияОписаниеРасширеннаяПодсказка" id="43"/>
+		</LabelDecoration>
 		<InputField name="АдресАпи" id="10">
 			<DataPath>Объект.АдресАпи</DataPath>
 			<EditMode>EnterOnInput</EditMode>
@@ -82,7 +93,7 @@
 				<ExtendedTooltip name="ЗащищенныеДанныеУправлениеПоискомРасширеннаяПодсказка" id="31"/>
 			</SearchControlAddition>
 			<Events>
-				<Event name="Drag">ЗащищенныеДанныеПеретаскивание</Event>
+				<Event name="BeforeAddRow">ЗащищенныеДанныеПередНачаломДобавления</Event>
 			</Events>
 			<ChildItems>
 				<LabelField name="ЗащищенныеДанныеНомерСтроки" id="32">
