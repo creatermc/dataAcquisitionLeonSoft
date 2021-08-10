@@ -49,27 +49,78 @@
 						</TextDocumentField>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="Группа3" id="17">
-					<Group>Vertical</Group>
+				<UsualGroup name="Группа4" id="27">
+					<Group>AlwaysHorizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="18"/>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="28"/>
 					<ChildItems>
-						<Button name="СформироватьЗапрос" id="22">
-							<Type>UsualButton</Type>
-							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
-							<CommandName>Form.Command.СформироватьЗапрос</CommandName>
-							<ExtendedTooltip name="СформироватьЗапросРасширеннаяПодсказка" id="23"/>
-						</Button>
-						<TextDocumentField name="ИскходныйТекстДляФормированияЗапроса" id="19">
-							<DataPath>Объект.ИскходныйТекстДляФормированияЗапроса</DataPath>
-							<ContextMenu name="ИскходныйТекстДляФормированияЗапросаКонтекстноеМеню" id="20"/>
-							<ExtendedTooltip name="ИскходныйТекстДляФормированияЗапросаРасширеннаяПодсказка" id="21"/>
-						</TextDocumentField>
+						<UsualGroup name="Группа3" id="17">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="18"/>
+							<ChildItems>
+								<Button name="СформироватьЗапрос" id="22">
+									<Type>UsualButton</Type>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<CommandName>Form.Command.СформироватьЗапрос</CommandName>
+									<ExtendedTooltip name="СформироватьЗапросРасширеннаяПодсказка" id="23"/>
+								</Button>
+								<InputField name="ТипМодели" id="34">
+									<DataPath>Объект.ТипМодели</DataPath>
+									<Enabled>false</Enabled>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ТипМоделиКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="ТипМоделиРасширеннаяПодсказка" id="36"/>
+									<Events>
+										<Event name="ChoiceProcessing">ТипМоделиОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<TextDocumentField name="ИскходныйТекстДляФормированияЗапроса" id="19">
+									<DataPath>Объект.ИскходныйТекстДляФормированияЗапроса</DataPath>
+									<TextColor>web:DarkBlue</TextColor>
+									<BorderColor>web:DarkOrange</BorderColor>
+									<Font ref="style:NormalTextFont" height="11" kind="StyleItem"/>
+									<ContextMenu name="ИскходныйТекстДляФормированияЗапросаКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ИскходныйТекстДляФормированияЗапросаРасширеннаяПодсказка" id="21"/>
+									<Events>
+										<Event name="OnChange">ИскходныйТекстДляФормированияЗапросаПриИзменении</Event>
+									</Events>
+								</TextDocumentField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа5" id="29">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="30"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияОписание" id="31">
+									<Width>12</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для правильного формирования запроса,
+необходмиро все строки перенсить с разделеителями по фигурной сскобке или при чередованиии полей через запрятую</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияОписаниеКонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="ДекорацияОписаниеРасширеннаяПодсказка" id="33"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
+		<InputField name="предпроверка" id="24">
+			<DataPath>предпроверка</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="предпроверкаКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="предпроверкаРасширеннаяПодсказка" id="26"/>
+		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -78,6 +129,21 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="предпроверка" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предпроверка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>

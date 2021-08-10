@@ -181,8 +181,10 @@
 			<Catalog>ВнешниеСервисы</Catalog>
 			<Catalog>ТекстЗапросовЛеон</Catalog>
 			<Enum>ВидТокена</Enum>
+			<Enum>ТипМодели</Enum>
 			<DataProcessor>ОтправкаЗапросовLeonSoft</DataProcessor>
 			<InformationRegister>БезопасноеХранилищеДанных</InformationRegister>
+			<Task>Задача1</Task>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
