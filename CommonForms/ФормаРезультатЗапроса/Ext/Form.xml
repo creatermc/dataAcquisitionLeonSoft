@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаТаблицаЗначений" id="37">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТаблицаЗначенийРасширеннаяПодсказка" id="38"/>
+			<ChildItems>
+				<Table name="РезультатТаблицаЗначений" id="39">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>РезультатТаблицаЗначений</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="РезультатТаблицаЗначенийКонтекстноеМеню" id="40"/>
+					<AutoCommandBar name="РезультатТаблицаЗначенийКоманднаяПанель" id="41"/>
+					<ExtendedTooltip name="РезультатТаблицаЗначенийРасширеннаяПодсказка" id="42"/>
+					<SearchStringAddition name="РезультатТаблицаЗначенийСтрокаПоиска" id="43">
+						<AdditionSource>
+							<Item>РезультатТаблицаЗначений</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="РезультатТаблицаЗначенийСтрокаПоискаКонтекстноеМеню" id="44"/>
+						<ExtendedTooltip name="РезультатТаблицаЗначенийСтрокаПоискаРасширеннаяПодсказка" id="45"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="РезультатТаблицаЗначенийСостояниеПросмотра" id="46">
+						<AdditionSource>
+							<Item>РезультатТаблицаЗначений</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="РезультатТаблицаЗначенийСостояниеПросмотраКонтекстноеМеню" id="47"/>
+						<ExtendedTooltip name="РезультатТаблицаЗначенийСостояниеПросмотраРасширеннаяПодсказка" id="48"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="РезультатТаблицаЗначенийУправлениеПоиском" id="49">
+						<AdditionSource>
+							<Item>РезультатТаблицаЗначений</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="РезультатТаблицаЗначенийУправлениеПоискомКонтекстноеМеню" id="50"/>
+						<ExtendedTooltip name="РезультатТаблицаЗначенийУправлениеПоискомРасширеннаяПодсказка" id="51"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="РезультатТаблицаЗначенийРеквизит1" id="52">
+							<DataPath>РезультатТаблицаЗначений.Реквизит1</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="РезультатТаблицаЗначенийРеквизит1КонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="РезультатТаблицаЗначенийРеквизит1РасширеннаяПодсказка" id="54"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДеревоЗначений" id="1">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДеревоЗначенийРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Table name="РезультатДеревоЗначений" id="3">
+					<Representation>Tree</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>РезультатДеревоЗначений</DataPath>
+					<TreeSpecialSearch>false</TreeSpecialSearch>
+					<ContextMenu name="РезультатДеревоЗначенийКонтекстноеМеню" id="4"/>
+					<AutoCommandBar name="РезультатДеревоЗначенийКоманднаяПанель" id="5"/>
+					<ExtendedTooltip name="РезультатДеревоЗначенийРасширеннаяПодсказка" id="6"/>
+					<SearchStringAddition name="РезультатДеревоЗначенийСтрокаПоиска" id="7">
+						<AdditionSource>
+							<Item>РезультатДеревоЗначений</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="РезультатДеревоЗначенийСтрокаПоискаКонтекстноеМеню" id="8"/>
+						<ExtendedTooltip name="РезультатДеревоЗначенийСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="РезультатДеревоЗначенийСостояниеПросмотра" id="10">
+						<AdditionSource>
+							<Item>РезультатДеревоЗначений</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="РезультатДеревоЗначенийСостояниеПросмотраКонтекстноеМеню" id="11"/>
+						<ExtendedTooltip name="РезультатДеревоЗначенийСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="РезультатДеревоЗначенийУправлениеПоиском" id="13">
+						<AdditionSource>
+							<Item>РезультатДеревоЗначений</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="РезультатДеревоЗначенийУправлениеПоискомКонтекстноеМеню" id="14"/>
+						<ExtendedTooltip name="РезультатДеревоЗначенийУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="РезультатДеревоЗначенийРеквизит1" id="34">
+							<DataPath>РезультатДеревоЗначений.Реквизит1</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="РезультатДеревоЗначенийРеквизит1КонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="РезультатДеревоЗначенийРеквизит1РасширеннаяПодсказка" id="36"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСписокЗначений" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа список значений</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСписокЗначенийРасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<Table name="РезультатСписокЗначений" id="18">
+					<Representation>List</Representation>
+					<Header>false</Header>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<DataPath>РезультатСписокЗначений</DataPath>
+					<RowPictureDataPath>РезультатСписокЗначений.Picture</RowPictureDataPath>
+					<ContextMenu name="РезультатСписокЗначенийКонтекстноеМеню" id="19"/>
+					<AutoCommandBar name="РезультатСписокЗначенийКоманднаяПанель" id="20"/>
+					<ExtendedTooltip name="РезультатСписокЗначенийРасширеннаяПодсказка" id="21"/>
+					<SearchStringAddition name="РезультатСписокЗначенийСтрокаПоиска" id="22">
+						<AdditionSource>
+							<Item>РезультатСписокЗначений</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="РезультатСписокЗначенийСтрокаПоискаКонтекстноеМеню" id="23"/>
+						<ExtendedTooltip name="РезультатСписокЗначенийСтрокаПоискаРасширеннаяПодсказка" id="24"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="РезультатСписокЗначенийСостояниеПросмотра" id="25">
+						<AdditionSource>
+							<Item>РезультатСписокЗначений</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="РезультатСписокЗначенийСостояниеПросмотраКонтекстноеМеню" id="26"/>
+						<ExtendedTooltip name="РезультатСписокЗначенийСостояниеПросмотраРасширеннаяПодсказка" id="27"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="РезультатСписокЗначенийУправлениеПоиском" id="28">
+						<AdditionSource>
+							<Item>РезультатСписокЗначений</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="РезультатСписокЗначенийУправлениеПоискомКонтекстноеМеню" id="29"/>
+						<ExtendedTooltip name="РезультатСписокЗначенийУправлениеПоискомРасширеннаяПодсказка" id="30"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="РезультатСписокЗначенийЗначение" id="31">
+							<DataPath>РезультатСписокЗначений.Value</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="РезультатСписокЗначенийЗначениеКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="РезультатСписокЗначенийЗначениеРасширеннаяПодсказка" id="33"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="РезультатДеревоЗначений" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат дерево значений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Реквизит1" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="РезультатСписокЗначений" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат список значений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РезультатТаблицаЗначений" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат таблица значений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Реквизит1" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

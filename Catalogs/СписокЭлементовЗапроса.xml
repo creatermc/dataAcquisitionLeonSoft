@@ -1,50 +1,50 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
-	<Catalog uuid="bd1371db-f514-11eb-3f91-b42e9905bfa2">
+	<Catalog uuid="ef24729e-f9d5-11eb-029a-b42e9905bfa2">
 		<InternalInfo>
-			<xr:GeneratedType name="CatalogObject.ТекстЗапросовЛеон" category="Object">
-				<xr:TypeId>bd1371b2-f514-11eb-3f91-b42e9905bfa2</xr:TypeId>
-				<xr:ValueId>bd1371b3-f514-11eb-3f91-b42e9905bfa2</xr:ValueId>
+			<xr:GeneratedType name="CatalogObject.СписокЭлементовЗапроса" category="Object">
+				<xr:TypeId>ef247294-f9d5-11eb-029a-b42e9905bfa2</xr:TypeId>
+				<xr:ValueId>ef247295-f9d5-11eb-029a-b42e9905bfa2</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogRef.ТекстЗапросовЛеон" category="Ref">
-				<xr:TypeId>bd1371bc-f514-11eb-3f91-b42e9905bfa2</xr:TypeId>
-				<xr:ValueId>bd1371bd-f514-11eb-3f91-b42e9905bfa2</xr:ValueId>
+			<xr:GeneratedType name="CatalogRef.СписокЭлементовЗапроса" category="Ref">
+				<xr:TypeId>ef247296-f9d5-11eb-029a-b42e9905bfa2</xr:TypeId>
+				<xr:ValueId>ef247297-f9d5-11eb-029a-b42e9905bfa2</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogSelection.ТекстЗапросовЛеон" category="Selection">
-				<xr:TypeId>bd1371c6-f514-11eb-3f91-b42e9905bfa2</xr:TypeId>
-				<xr:ValueId>bd1371c7-f514-11eb-3f91-b42e9905bfa2</xr:ValueId>
+			<xr:GeneratedType name="CatalogSelection.СписокЭлементовЗапроса" category="Selection">
+				<xr:TypeId>ef247298-f9d5-11eb-029a-b42e9905bfa2</xr:TypeId>
+				<xr:ValueId>ef247299-f9d5-11eb-029a-b42e9905bfa2</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogList.ТекстЗапросовЛеон" category="List">
-				<xr:TypeId>bd1371c8-f514-11eb-3f91-b42e9905bfa2</xr:TypeId>
-				<xr:ValueId>bd1371d0-f514-11eb-3f91-b42e9905bfa2</xr:ValueId>
+			<xr:GeneratedType name="CatalogList.СписокЭлементовЗапроса" category="List">
+				<xr:TypeId>ef24729a-f9d5-11eb-029a-b42e9905bfa2</xr:TypeId>
+				<xr:ValueId>ef24729b-f9d5-11eb-029a-b42e9905bfa2</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogManager.ТекстЗапросовЛеон" category="Manager">
-				<xr:TypeId>bd1371d1-f514-11eb-3f91-b42e9905bfa2</xr:TypeId>
-				<xr:ValueId>bd1371da-f514-11eb-3f91-b42e9905bfa2</xr:ValueId>
+			<xr:GeneratedType name="CatalogManager.СписокЭлементовЗапроса" category="Manager">
+				<xr:TypeId>ef24729c-f9d5-11eb-029a-b42e9905bfa2</xr:TypeId>
+				<xr:ValueId>ef24729d-f9d5-11eb-029a-b42e9905bfa2</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>ТекстЗапросовЛеон</Name>
+			<Name>СписокЭлементовЗапроса</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Текст запросов леон</v8:content>
+					<v8:content>Список элементов запроса</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment/>
+			<Comment>Список элементов запроса GraphQL</Comment>
 			<Hierarchical>true</Hierarchical>
-			<HierarchyType>HierarchyFoldersAndItems</HierarchyType>
+			<HierarchyType>HierarchyOfItems</HierarchyType>
 			<LimitLevelCount>false</LimitLevelCount>
 			<LevelCount>2</LevelCount>
-			<FoldersOnTop>true</FoldersOnTop>
+			<FoldersOnTop>false</FoldersOnTop>
 			<UseStandardCommands>true</UseStandardCommands>
 			<Owners/>
 			<SubordinationUse>ToItems</SubordinationUse>
 			<CodeLength>9</CodeLength>
-			<DescriptionLength>150</DescriptionLength>
+			<DescriptionLength>25</DescriptionLength>
 			<CodeType>String</CodeType>
 			<CodeAllowedLength>Variable</CodeAllowedLength>
-			<CodeSeries>WholeCatalog</CodeSeries>
+			<CodeSeries>WithinSubordination</CodeSeries>
 			<CheckUnique>true</CheckUnique>
 			<Autonumbering>true</Autonumbering>
 			<DefaultPresentation>AsDescription</DefaultPresentation>
@@ -54,15 +54,15 @@
 			<QuickChoice>false</QuickChoice>
 			<ChoiceMode>BothWays</ChoiceMode>
 			<InputByString>
-				<xr:Field>Catalog.ТекстЗапросовЛеон.StandardAttribute.Description</xr:Field>
-				<xr:Field>Catalog.ТекстЗапросовЛеон.StandardAttribute.Code</xr:Field>
+				<xr:Field>Catalog.СписокЭлементовЗапроса.StandardAttribute.Description</xr:Field>
+				<xr:Field>Catalog.СписокЭлементовЗапроса.StandardAttribute.Code</xr:Field>
 			</InputByString>
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm>Catalog.ТекстЗапросовЛеон.Form.ФормаЭлемента</DefaultObjectForm>
+			<DefaultObjectForm>Catalog.СписокЭлементовЗапроса.Form.ФормаЭлемента</DefaultObjectForm>
 			<DefaultFolderForm/>
-			<DefaultListForm>Catalog.ТекстЗапросовЛеон.Form.ФормаСписка</DefaultListForm>
+			<DefaultListForm/>
 			<DefaultChoiceForm/>
 			<DefaultFolderChoiceForm/>
 			<AuxiliaryObjectForm/>
@@ -77,14 +77,18 @@
 			<FullTextSearch>Use</FullTextSearch>
 			<ObjectPresentation/>
 			<ExtendedObjectPresentation/>
-			<ListPresentation>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Тексты запросов леон</v8:content>
+					<v8:content>GraphQL это синтаксис, который описывает как запрашивать данные, и, в основном, используется клиентом для загрузки данных с сервера. GraphQL имеет три основные характеристики:
+Позволяет клиенту точно указать, какие данные ему нужны.
+Облегчает агрегацию данных из нескольких источников.
+Использует систему типов для описания данных.
+</v8:content>
 				</v8:item>
-			</ListPresentation>
-			<ExtendedListPresentation/>
-			<Explanation/>
+			</Explanation>
 			<CreateOnInput>Use</CreateOnInput>
 			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 			<DataHistory>DontUse</DataHistory>
@@ -92,20 +96,20 @@
 			<ExecuteAfterWriteDataHistoryVersionProcessing>false</ExecuteAfterWriteDataHistoryVersionProcessing>
 		</Properties>
 		<ChildObjects>
-			<Attribute uuid="f8b65568-f514-11eb-3f91-b42e9905bfa2">
+			<Attribute uuid="bb7ad630-f9d6-11eb-029a-b42e9905bfa2">
 				<Properties>
-					<Name>ТекстЗапроса</Name>
+					<Name>Описание</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Текст запроса</v8:content>
+							<v8:content>Описание</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
+							<v8:Length>1001</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
@@ -136,95 +140,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="278c84e6-f517-11eb-3f91-b42e9905bfa2">
-				<Properties>
-					<Name>Комментарий</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Комментарий</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-					<PasswordMode>false</PasswordMode>
-					<Format/>
-					<EditFormat/>
-					<ToolTip/>
-					<MarkNegatives>false</MarkNegatives>
-					<Mask/>
-					<MultiLine>false</MultiLine>
-					<ExtendedEdit>false</ExtendedEdit>
-					<MinValue xsi:nil="true"/>
-					<MaxValue xsi:nil="true"/>
-					<FillFromFillingValue>false</FillFromFillingValue>
-					<FillValue xsi:type="xs:string"/>
-					<FillChecking>DontCheck</FillChecking>
-					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-					<ChoiceParameterLinks/>
-					<ChoiceParameters/>
-					<QuickChoice>Auto</QuickChoice>
-					<CreateOnInput>Auto</CreateOnInput>
-					<ChoiceForm/>
-					<LinkByType/>
-					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
-					<Use>ForItem</Use>
-					<Indexing>DontIndex</Indexing>
-					<FullTextSearch>Use</FullTextSearch>
-					<DataHistory>Use</DataHistory>
-				</Properties>
-			</Attribute>
-			<Attribute uuid="e81f0414-f6bf-11eb-df9c-b42e9905bfa2">
-				<Properties>
-					<Name>ИсходныйТекстДляФормированияЗапроса</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Исходный текст для формирования запроса</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-					<PasswordMode>false</PasswordMode>
-					<Format/>
-					<EditFormat/>
-					<ToolTip/>
-					<MarkNegatives>false</MarkNegatives>
-					<Mask/>
-					<MultiLine>true</MultiLine>
-					<ExtendedEdit>true</ExtendedEdit>
-					<MinValue xsi:nil="true"/>
-					<MaxValue xsi:nil="true"/>
-					<FillFromFillingValue>false</FillFromFillingValue>
-					<FillValue xsi:type="xs:string"/>
-					<FillChecking>DontCheck</FillChecking>
-					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-					<ChoiceParameterLinks/>
-					<ChoiceParameters/>
-					<QuickChoice>Auto</QuickChoice>
-					<CreateOnInput>Auto</CreateOnInput>
-					<ChoiceForm/>
-					<LinkByType/>
-					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
-					<Use>ForItem</Use>
-					<Indexing>DontIndex</Indexing>
-					<FullTextSearch>Use</FullTextSearch>
-					<DataHistory>Use</DataHistory>
-				</Properties>
-			</Attribute>
-			<Attribute uuid="8cc06db0-f903-11eb-7e9b-b42e9905bfa2">
+			<Attribute uuid="c3cf9820-f9d6-11eb-029a-b42e9905bfa2">
 				<Properties>
 					<Name>ТипМодели</Name>
 					<Synonym>
@@ -264,18 +180,62 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="a898262c-faac-11eb-c691-b42e9905bfa2">
+			<Attribute uuid="060d2e5a-f9d7-11eb-029a-b42e9905bfa2">
 				<Properties>
-					<Name>ВнешнийСервис</Name>
+					<Name>Тип</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Внешний сервис</v8:content>
+							<v8:content>Тип</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:CatalogRef.ВнешниеСервисы</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:type="xs:string"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Use>ForItem</Use>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="36463b7a-f9d7-11eb-029a-b42e9905bfa2">
+				<Properties>
+					<Name>Спецификация</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Спецификация</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЗапросыЛеонСофтваре</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -305,7 +265,6 @@
 				</Properties>
 			</Attribute>
 			<Form>ФормаЭлемента</Form>
-			<Form>ФормаСписка</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>

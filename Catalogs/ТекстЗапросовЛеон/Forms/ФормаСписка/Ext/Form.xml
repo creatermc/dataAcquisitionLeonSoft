@@ -91,6 +91,11 @@
 					<ContextMenu name="ТипМоделиКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="ТипМоделиРасширеннаяПодсказка" id="24"/>
 				</LabelField>
+				<LabelField name="ВнешнийСервис" id="28">
+					<DataPath>Список.ВнешнийСервис</DataPath>
+					<ContextMenu name="ВнешнийСервисКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ВнешнийСервисРасширеннаяПодсказка" id="30"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>

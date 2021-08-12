@@ -177,12 +177,16 @@
 			<CommonModule>ОбщегоНазначенияПовтИсп</CommonModule>
 			<CommonModule>РаботаСВнешнимиСервисамиПовтИсп</CommonModule>
 			<CommonModule>СтроковыеФункцииКлиентСервер</CommonModule>
+			<CommonForm>ФормаРезультатЗапроса</CommonForm>
 			<Catalog>ЗапросыЛеонСофтваре</Catalog>
 			<Catalog>ВнешниеСервисы</Catalog>
 			<Catalog>ТекстЗапросовЛеон</Catalog>
+			<Catalog>Пользователи</Catalog>
+			<Catalog>СписокЭлементовЗапроса</Catalog>
 			<Enum>ВидТокена</Enum>
 			<Enum>ТипМодели</Enum>
 			<DataProcessor>ОтправкаЗапросовLeonSoft</DataProcessor>
+			<DataProcessor>ПервоначальноеАвтоЗаполнение</DataProcessor>
 			<InformationRegister>БезопасноеХранилищеДанных</InformationRegister>
 			<Task>Задача1</Task>
 		</ChildObjects>

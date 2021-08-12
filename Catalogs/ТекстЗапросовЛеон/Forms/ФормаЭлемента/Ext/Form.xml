@@ -2,16 +2,30 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="Группа1" id="13">
+		<UsualGroup name="ГруппаКомманднаяПанель" id="39">
 			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="14"/>
+			<ExtendedTooltip name="ГруппаКомманднаяПанельРасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<CommandBar name="Группа6" id="41">
+					<CommandSource>Form</CommandSource>
+					<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="42"/>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОбщая" id="13">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбщаяРасширеннаяПодсказка" id="14"/>
 			<ChildItems>
 				<UsualGroup name="Группа2" id="15">
 					<Group>Vertical</Group>
@@ -31,22 +45,195 @@
 							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
 						</InputField>
+						<InputField name="Родитель" id="99">
+							<DataPath>Объект.Parent</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="РодительКонтекстноеМеню" id="100"/>
+							<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="101"/>
+						</InputField>
 						<InputField name="ТекстЗапроса" id="7">
 							<DataPath>Объект.ТекстЗапроса</DataPath>
 							<EditMode>EnterOnInput</EditMode>
-							<HorizontalStretch>true</HorizontalStretch>
+							<AutoMaxWidth>false</AutoMaxWidth>
 							<TextColor>#00622E</TextColor>
+							<BorderColor>web:DarkGreen</BorderColor>
 							<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="8"/>
 							<ExtendedTooltip name="ТекстЗапросаРасширеннаяПодсказка" id="9"/>
 						</InputField>
+						<UsualGroup name="ГруппаТестЗапроса" id="48">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТестЗапросаРасширеннаяПодсказка" id="49"/>
+							<ChildItems>
+								<InputField name="СервисПодключения" id="45">
+									<DataPath>Объект.ВнешнийСервис</DataPath>
+									<ContextMenu name="СервисПодключенияКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="СервисПодключенияРасширеннаяПодсказка" id="47"/>
+								</InputField>
+								<Button name="ТестЗапроса" id="37">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ТестЗапроса</CommandName>
+									<ExtendedTooltip name="ТестЗапросаРасширеннаяПодсказка" id="38"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 						<TextDocumentField name="Комментарий" id="10">
 							<DataPath>Объект.Комментарий</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание</v8:content>
+								</v8:item>
+							</Title>
 							<EditMode>EnterOnInput</EditMode>
 							<TextColor>web:MidnightBlue</TextColor>
 							<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
 							<ContextMenu name="КомментарийКонтекстноеМеню" id="11"/>
 							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="12"/>
 						</TextDocumentField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЭлементыЗапроса" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Элементы запроса</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЭлементыЗапросаРасширеннаяПодсказка" id="51"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКоманднаяПанель" id="95">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="96"/>
+							<ChildItems>
+								<Button name="ФормаДобавитьВТекстЗапроса" id="86">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ДобавитьВТекстЗапроса</CommandName>
+									<ExtendedTooltip name="ФормаДобавитьВТекстЗапросаРасширеннаяПодсказка" id="87"/>
+								</Button>
+								<CommandBar name="ГруппаКоманднаяПанельЭлЗапроса" id="97">
+									<CommandSource>Item.ЭлементыЗапроса</CommandSource>
+									<ExtendedTooltip name="ГруппаКоманднаяПанельЭлЗапросаРасширеннаяПодсказка" id="98"/>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ЭлементыЗапроса" id="55">
+							<Representation>Tree</Representation>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<Header>false</Header>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
+							<InitialTreeView>ExpandAllLevels</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ЭлементыЗапроса</DataPath>
+							<RowPictureDataPath>ЭлементыЗапроса.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ЭлементыЗапросаКонтекстноеМеню" id="56"/>
+							<AutoCommandBar name="ЭлементыЗапросаКоманднаяПанель" id="57">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЭлементыЗапросаРасширеннаяПодсказка" id="58"/>
+							<SearchStringAddition name="ЭлементыЗапросаСтрокаПоиска" id="59">
+								<AdditionSource>
+									<Item>ЭлементыЗапроса</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭлементыЗапросаСтрокаПоискаКонтекстноеМеню" id="60"/>
+								<ExtendedTooltip name="ЭлементыЗапросаСтрокаПоискаРасширеннаяПодсказка" id="61"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЭлементыЗапросаСостояниеПросмотра" id="62">
+								<AdditionSource>
+									<Item>ЭлементыЗапроса</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭлементыЗапросаСостояниеПросмотраКонтекстноеМеню" id="63"/>
+								<ExtendedTooltip name="ЭлементыЗапросаСостояниеПросмотраРасширеннаяПодсказка" id="64"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЭлементыЗапросаУправлениеПоиском" id="65">
+								<AdditionSource>
+									<Item>ЭлементыЗапроса</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЭлементыЗапросаУправлениеПоискомКонтекстноеМеню" id="66"/>
+								<ExtendedTooltip name="ЭлементыЗапросаУправлениеПоискомРасширеннаяПодсказка" id="67"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЭлементовЗапросаНаименование" id="68">
+									<DataPath>ЭлементыЗапроса.Description</DataPath>
+									<ContextMenu name="ЭлементовЗапросаНаименованиеКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="ЭлементовЗапросаНаименованиеРасширеннаяПодсказка" id="70"/>
+								</LabelField>
+								<LabelField name="ЭлементовЗапросаКод" id="71">
+									<DataPath>ЭлементыЗапроса.Code</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="ЭлементовЗапросаКодКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="ЭлементовЗапросаКодРасширеннаяПодсказка" id="73"/>
+								</LabelField>
+								<LabelField name="ЭлементовЗапросаОписание" id="74">
+									<DataPath>ЭлементыЗапроса.Описание</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="ЭлементовЗапросаОписаниеКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="ЭлементовЗапросаОписаниеРасширеннаяПодсказка" id="76"/>
+								</LabelField>
+								<LabelField name="ЭлементовЗапросаТипМодели" id="77">
+									<DataPath>ЭлементыЗапроса.ТипМодели</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="ЭлементовЗапросаТипМоделиКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="ЭлементовЗапросаТипМоделиРасширеннаяПодсказка" id="79"/>
+								</LabelField>
+								<LabelField name="ЭлементовЗапросаТип" id="80">
+									<DataPath>ЭлементыЗапроса.Тип</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="ЭлементовЗапросаТипКонтекстноеМеню" id="81"/>
+									<ExtendedTooltip name="ЭлементовЗапросаТипРасширеннаяПодсказка" id="82"/>
+								</LabelField>
+								<LabelField name="ЭлементовЗапросаСпецификация" id="83">
+									<DataPath>ЭлементыЗапроса.Спецификация</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="ЭлементовЗапросаСпецификацияКонтекстноеМеню" id="84"/>
+									<ExtendedTooltip name="ЭлементовЗапросаСпецификацияРасширеннаяПодсказка" id="85"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаФорматированногоДокументаЗапроса" id="93">
+					<Visible>false</Visible>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаФорматированногоДокументаЗапросаРасширеннаяПодсказка" id="94"/>
+					<ChildItems>
+						<CommandBar name="ГруппаКоманднаяПанельФормДокаЗапроса" id="91">
+							<CommandSource>Item.ДокументЗапроса</CommandSource>
+							<ExtendedTooltip name="ГруппаКоманднаяПанельФормДокаЗапросаРасширеннаяПодсказка" id="92"/>
+						</CommandBar>
+						<FormattedDocumentField name="ДокументЗапроса" id="88">
+							<DataPath>ДокументЗапроса</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+							<Output>Enable</Output>
+							<ContextMenu name="ДокументЗапросаКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="ДокументЗапросаРасширеннаяПодсказка" id="90"/>
+						</FormattedDocumentField>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="Группа4" id="27">
@@ -61,24 +248,32 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="18"/>
 							<ChildItems>
-								<Button name="СформироватьЗапрос" id="22">
-									<Type>UsualButton</Type>
-									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
-									<CommandName>Form.Command.СформироватьЗапрос</CommandName>
-									<ExtendedTooltip name="СформироватьЗапросРасширеннаяПодсказка" id="23"/>
-								</Button>
-								<InputField name="ТипМодели" id="34">
-									<DataPath>Объект.ТипМодели</DataPath>
-									<Enabled>false</Enabled>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="ТипМоделиКонтекстноеМеню" id="35"/>
-									<ExtendedTooltip name="ТипМоделиРасширеннаяПодсказка" id="36"/>
-									<Events>
-										<Event name="ChoiceProcessing">ТипМоделиОбработкаВыбора</Event>
-									</Events>
-								</InputField>
+								<UsualGroup name="ГруппаТипМоделиИКнопка" id="43">
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТипМоделиИКнопкаРасширеннаяПодсказка" id="44"/>
+									<ChildItems>
+										<InputField name="ТипМодели" id="34">
+											<DataPath>Объект.ТипМодели</DataPath>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ТипМоделиКонтекстноеМеню" id="35"/>
+											<ExtendedTooltip name="ТипМоделиРасширеннаяПодсказка" id="36"/>
+											<Events>
+												<Event name="ChoiceProcessing">ТипМоделиОбработкаВыбора</Event>
+											</Events>
+										</InputField>
+										<Button name="СформироватьЗапрос" id="22">
+											<Type>UsualButton</Type>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<CommandName>Form.Command.СформироватьЗапрос</CommandName>
+											<ExtendedTooltip name="СформироватьЗапросРасширеннаяПодсказка" id="23"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
 								<TextDocumentField name="ИскходныйТекстДляФормированияЗапроса" id="19">
-									<DataPath>Объект.ИскходныйТекстДляФормированияЗапроса</DataPath>
+									<DataPath>Объект.ИсходныйТекстДляФормированияЗапроса</DataPath>
 									<TextColor>web:DarkBlue</TextColor>
 									<BorderColor>web:DarkOrange</BorderColor>
 									<Font ref="style:NormalTextFont" height="11" kind="StyleItem"/>
@@ -145,6 +340,49 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ЭлементыЗапроса" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Элементы запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.СписокЭлементовЗапроса</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДокументЗапроса" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:fd="http://v8.1c.ru/8.2/data/formatted-document">fd:FormattedDocument</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="СформироватьЗапрос" id="1">
@@ -161,6 +399,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СформироватьЗапрос</Action>
+		</Command>
+		<Command name="ТестЗапроса" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест запроса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест запроса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТестЗапроса</Action>
+		</Command>
+		<Command name="ДобавитьВТекстЗапроса" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в запрос</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в текст запроса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьВТекстЗапроса</Action>
 		</Command>
 	</Commands>
 </Form>
