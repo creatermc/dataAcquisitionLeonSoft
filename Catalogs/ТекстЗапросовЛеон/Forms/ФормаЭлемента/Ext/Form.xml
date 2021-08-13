@@ -10,14 +10,35 @@
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаКомманднаяПанель" id="39">
+			<HorizontalStretch>true</HorizontalStretch>
 			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаКомманднаяПанельРасширеннаяПодсказка" id="40"/>
 			<ChildItems>
 				<CommandBar name="Группа6" id="41">
+					<HorizontalStretch>true</HorizontalStretch>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 					<CommandSource>Form</CommandSource>
 					<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="42"/>
+					<ChildItems>
+						<Button name="ФормаОтобразитьСписокЭлементов" id="102">
+							<Type>CommandBarButton</Type>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<CommandName>Form.Command.ОтобразитьСписокЭлементов</CommandName>
+							<ExtendedTooltip name="ФормаОтобразитьСписокЭлементовРасширеннаяПодсказка" id="103"/>
+						</Button>
+						<Button name="ФормаОтобразитьИскходныйТекст" id="104">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ОтобразитьИскходныйТекст</CommandName>
+							<ExtendedTooltip name="ФормаОтобразитьИскходныйТекстРасширеннаяПодсказка" id="105"/>
+						</Button>
+						<Button name="ФормаОтобразитьГрафСхему" id="106">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ОтобразитьГрафСхему</CommandName>
+							<ExtendedTooltip name="ФормаОтобразитьГрафСхемуРасширеннаяПодсказка" id="107"/>
+						</Button>
+					</ChildItems>
 				</CommandBar>
 			</ChildItems>
 		</UsualGroup>
@@ -95,13 +116,9 @@
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаЭлементыЗапроса" id="50">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Элементы запроса</v8:content>
-						</v8:item>
-					</Title>
+					<Visible>false</Visible>
 					<Group>Vertical</Group>
+					<Collapsed>true</Collapsed>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаЭлементыЗапросаРасширеннаяПодсказка" id="51"/>
@@ -236,11 +253,12 @@
 						</FormattedDocumentField>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="Группа4" id="27">
+				<UsualGroup name="ГруппаИскходногоТекстаЗапроса" id="27">
+					<Visible>false</Visible>
 					<Group>AlwaysHorizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="28"/>
+					<ExtendedTooltip name="ГруппаИскходногоТекстаЗапросаРасширеннаяПодсказка" id="28"/>
 					<ChildItems>
 						<UsualGroup name="Группа3" id="17">
 							<Group>Vertical</Group>
@@ -429,6 +447,65 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ДобавитьВТекстЗапроса</Action>
+		</Command>
+		<Command name="ОтобразитьСписокЭлементов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Элементы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отобразить список элементов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ListViewModeTree</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтобразитьСписокЭлементов</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ОтобразитьИскходныйТекст" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Искходный текст</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отобразить искходный текст запроса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExternalDataSourceFunction</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтобразитьИскходныйТекст</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ОтобразитьГрафСхему" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Граф схема</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отобразить граф схему по текущему запросу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.BusinessProcess</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтобразитьГрафСхему</Action>
 		</Command>
 	</Commands>
 </Form>

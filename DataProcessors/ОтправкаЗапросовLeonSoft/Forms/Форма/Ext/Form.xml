@@ -93,12 +93,74 @@
 			<ContextMenu name="ВнешнийСервисКонтекстноеМеню" id="29"/>
 			<ExtendedTooltip name="ВнешнийСервисРасширеннаяПодсказка" id="30"/>
 		</InputField>
-		<TextDocumentField name="ЗапросТекст" id="12">
-			<DataPath>ЗапросТекст</DataPath>
-			<Height>5</Height>
-			<ContextMenu name="ЗапросТекстКонтекстноеМеню" id="13"/>
-			<ExtendedTooltip name="ЗапросТекстРасширеннаяПодсказка" id="14"/>
-		</TextDocumentField>
+		<UsualGroup name="ГруппаФормировЗапроса" id="31">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФормировЗапросаРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<Table name="ЭлементыЗапроса" id="33">
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>ЭлементыЗапроса</DataPath>
+					<RowPictureDataPath>ЭлементыЗапроса.DefaultPicture</RowPictureDataPath>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<ContextMenu name="ЭлементыЗапросаКонтекстноеМеню" id="34"/>
+					<AutoCommandBar name="ЭлементыЗапросаКоманднаяПанель" id="35"/>
+					<ExtendedTooltip name="ЭлементыЗапросаРасширеннаяПодсказка" id="36"/>
+					<SearchStringAddition name="ЭлементыЗапросаСтрокаПоиска" id="37">
+						<AdditionSource>
+							<Item>ЭлементыЗапроса</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЭлементыЗапросаСтрокаПоискаКонтекстноеМеню" id="38"/>
+						<ExtendedTooltip name="ЭлементыЗапросаСтрокаПоискаРасширеннаяПодсказка" id="39"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ЭлементыЗапросаСостояниеПросмотра" id="40">
+						<AdditionSource>
+							<Item>ЭлементыЗапроса</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЭлементыЗапросаСостояниеПросмотраКонтекстноеМеню" id="41"/>
+						<ExtendedTooltip name="ЭлементыЗапросаСостояниеПросмотраРасширеннаяПодсказка" id="42"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ЭлементыЗапросаУправлениеПоиском" id="43">
+						<AdditionSource>
+							<Item>ЭлементыЗапроса</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ЭлементыЗапросаУправлениеПоискомКонтекстноеМеню" id="44"/>
+						<ExtendedTooltip name="ЭлементыЗапросаУправлениеПоискомРасширеннаяПодсказка" id="45"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ЭлементыЗапросаНаименование" id="46">
+							<DataPath>ЭлементыЗапроса.Description</DataPath>
+							<ContextMenu name="ЭлементыЗапросаНаименованиеКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ЭлементыЗапросаНаименованиеРасширеннаяПодсказка" id="48"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+				<TextDocumentField name="ЗапросТекст" id="12">
+					<DataPath>ЗапросТекст</DataPath>
+					<Height>5</Height>
+					<ContextMenu name="ЗапросТекстКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ЗапросТекстРасширеннаяПодсказка" id="14"/>
+				</TextDocumentField>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -180,6 +242,32 @@
 			<Type>
 				<v8:Type>cfg:CatalogRef.ВнешниеСервисы</v8:Type>
 			</Type>
+		</Attribute>
+		<Attribute name="ЭлементыЗапроса" id="8">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.СписокЭлементовЗапроса</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
 		</Attribute>
 	</Attributes>
 	<Commands>

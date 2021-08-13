@@ -16,9 +16,32 @@
 				<Table name="РезультатТаблицаЗначений" id="39">
 					<Representation>List</Representation>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<InitialTreeView>ExpandAllLevels</InitialTreeView>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
 					<DataPath>РезультатТаблицаЗначений</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>CancelSearch</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Find</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>OutputList</ExcludedCommand>
+						<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+						<ExcludedCommand>SelectAll</ExcludedCommand>
+						<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
 					<RowFilter xsi:nil="true"/>
 					<ContextMenu name="РезультатТаблицаЗначенийКонтекстноеМеню" id="40"/>
 					<AutoCommandBar name="РезультатТаблицаЗначенийКоманднаяПанель" id="41"/>
@@ -50,6 +73,7 @@
 					<ChildItems>
 						<InputField name="РезультатТаблицаЗначенийРеквизит1" id="52">
 							<DataPath>РезультатТаблицаЗначений.Реквизит1</DataPath>
+							<TitleLocation>None</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
 							<ContextMenu name="РезультатТаблицаЗначенийРеквизит1КонтекстноеМеню" id="53"/>
 							<ExtendedTooltip name="РезультатТаблицаЗначенийРеквизит1РасширеннаяПодсказка" id="54"/>
@@ -59,6 +83,7 @@
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаДеревоЗначений" id="1">
+			<Visible>false</Visible>
 			<Group>Vertical</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -110,6 +135,7 @@
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаСписокЗначений" id="16">
+			<Visible>false</Visible>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
