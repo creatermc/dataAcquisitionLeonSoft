@@ -178,6 +178,7 @@
 			<CommonModule>РаботаСВнешнимиСервисамиПовтИсп</CommonModule>
 			<CommonModule>СтроковыеФункцииКлиентСервер</CommonModule>
 			<CommonForm>ФормаРезультатЗапроса</CommonForm>
+			<CommonForm>ПодробныеДанные</CommonForm>
 			<Catalog>ЗапросыЛеонСофтваре</Catalog>
 			<Catalog>ВнешниеСервисы</Catalog>
 			<Catalog>ТекстЗапросовЛеон</Catalog>

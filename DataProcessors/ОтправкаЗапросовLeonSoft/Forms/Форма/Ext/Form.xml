@@ -30,21 +30,25 @@
 		</InputField>
 		<Button name="ЗапросПолучитьРейсы" id="4">
 			<Type>UsualButton</Type>
+			<Visible>false</Visible>
 			<CommandName>Form.Command.ЗапросПолучитьРейсы</CommandName>
 			<ExtendedTooltip name="ЗапросПолучитьРейсыРасширеннаяПодсказка" id="5"/>
 		</Button>
 		<Button name="ЗапросОбменЛеон" id="6">
 			<Type>UsualButton</Type>
+			<Visible>false</Visible>
 			<CommandName>Form.Command.ЗапросОбменЛеон</CommandName>
 			<ExtendedTooltip name="ЗапросОбменЛеонРасширеннаяПодсказка" id="7"/>
 		</Button>
 		<Button name="ЗапросИзмененияРейсов" id="8">
 			<Type>UsualButton</Type>
+			<Visible>false</Visible>
 			<CommandName>Form.Command.ЗапросИзмененияРейсов</CommandName>
 			<ExtendedTooltip name="ЗапросИзмененияРейсовРасширеннаяПодсказка" id="9"/>
 		</Button>
 		<Button name="ЗапросПоЭЛ" id="10">
 			<Type>UsualButton</Type>
+			<Visible>false</Visible>
 			<CommandName>Form.Command.ЗапросПоЭЛ</CommandName>
 			<ExtendedTooltip name="ЗапросПоЭЛРасширеннаяПодсказка" id="11"/>
 		</Button>
@@ -100,6 +104,8 @@
 			<ExtendedTooltip name="ГруппаФормировЗапросаРасширеннаяПодсказка" id="32"/>
 			<ChildItems>
 				<Table name="ЭлементыЗапроса" id="33">
+					<Height>10</Height>
+					<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
 					<UseAlternationRowColor>true</UseAlternationRowColor>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
@@ -155,7 +161,7 @@
 				</Table>
 				<TextDocumentField name="ЗапросТекст" id="12">
 					<DataPath>ЗапросТекст</DataPath>
-					<Height>5</Height>
+					<Height>13</Height>
 					<ContextMenu name="ЗапросТекстКонтекстноеМеню" id="13"/>
 					<ExtendedTooltip name="ЗапросТекстРасширеннаяПодсказка" id="14"/>
 				</TextDocumentField>
@@ -225,7 +231,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выбрать из справочника</v8:content>
+					<v8:content>Из справочника</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
