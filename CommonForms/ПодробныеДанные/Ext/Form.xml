@@ -23,6 +23,7 @@
 	<ChildItems>
 		<Table name="ЭлементПодробнДаннТаблЗнач" id="1">
 			<Representation>List</Representation>
+			<ReadOnly>true</ReadOnly>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
@@ -57,6 +58,9 @@
 				<ContextMenu name="ЭлементПодробнДаннТаблЗначУправлениеПоискомКонтекстноеМеню" id="12"/>
 				<ExtendedTooltip name="ЭлементПодробнДаннТаблЗначУправлениеПоискомРасширеннаяПодсказка" id="13"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ЭлементПодробнДаннТаблЗначВыбор</Event>
+			</Events>
 		</Table>
 	</ChildItems>
 	<Attributes>
