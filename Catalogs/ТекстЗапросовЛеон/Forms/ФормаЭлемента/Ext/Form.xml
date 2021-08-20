@@ -6,6 +6,7 @@
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
 	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -48,11 +49,11 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаОбщаяРасширеннаяПодсказка" id="14"/>
 			<ChildItems>
-				<UsualGroup name="Группа2" id="15">
+				<UsualGroup name="ГруппаОписание" id="15">
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="16"/>
+					<ExtendedTooltip name="ГруппаОписаниеРасширеннаяПодсказка" id="16"/>
 					<ChildItems>
 						<InputField name="Код" id="1">
 							<DataPath>Объект.Code</DataPath>
@@ -194,12 +195,12 @@
 							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="ЭлементовЗапросаНаименование" id="68">
-									<DataPath>ЭлементыЗапроса.Description</DataPath>
+									<DataPath>ЭлементыЗапроса.Наименование</DataPath>
 									<ContextMenu name="ЭлементовЗапросаНаименованиеКонтекстноеМеню" id="69"/>
 									<ExtendedTooltip name="ЭлементовЗапросаНаименованиеРасширеннаяПодсказка" id="70"/>
 								</LabelField>
 								<LabelField name="ЭлементовЗапросаКод" id="71">
-									<DataPath>ЭлементыЗапроса.Code</DataPath>
+									<DataPath>ЭлементыЗапроса.Код</DataPath>
 									<Visible>false</Visible>
 									<ContextMenu name="ЭлементовЗапросаКодКонтекстноеМеню" id="72"/>
 									<ExtendedTooltip name="ЭлементовЗапросаКодРасширеннаяПодсказка" id="73"/>
@@ -369,8 +370,24 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникСписокЭлементовЗапроса.Ссылка КАК Ссылка,
+	СправочникСписокЭлементовЗапроса.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникСписокЭлементовЗапроса.Родитель КАК Родитель,
+	СправочникСписокЭлементовЗапроса.Код КАК Код,
+	СправочникСписокЭлементовЗапроса.Наименование КАК Наименование,
+	СправочникСписокЭлементовЗапроса.Описание КАК Описание,
+	СправочникСписокЭлементовЗапроса.ТипМодели КАК ТипМодели,
+	СправочникСписокЭлементовЗапроса.Тип КАК Тип,
+	СправочникСписокЭлементовЗапроса.Спецификация КАК Спецификация,
+	СправочникСписокЭлементовЗапроса.Предопределенный КАК Предопределенный,
+	СправочникСписокЭлементовЗапроса.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных
+ИЗ
+	Справочник.СписокЭлементовЗапроса КАК СправочникСписокЭлементовЗапроса
+ГДЕ
+	СправочникСписокЭлементовЗапроса.Родитель.Наименование &lt;&gt; "SCALARS"</QueryText>
 				<MainTable>Catalog.СписокЭлементовЗапроса</MainTable>
 				<ListSettings>
 					<dcsset:filter>
