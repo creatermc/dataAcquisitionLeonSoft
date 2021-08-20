@@ -117,7 +117,6 @@
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаЭлементыЗапроса" id="50">
-					<Visible>false</Visible>
 					<Group>Vertical</Group>
 					<Collapsed>true</Collapsed>
 					<Representation>None</Representation>
@@ -142,6 +141,9 @@
 						</UsualGroup>
 						<Table name="ЭлементыЗапроса" id="55">
 							<Representation>Tree</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<SelectionMode>SingleRow</SelectionMode>
 							<RowSelectionMode>Row</RowSelectionMode>
 							<Header>false</Header>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
@@ -151,6 +153,9 @@
 							<EnableDrag>true</EnableDrag>
 							<DataPath>ЭлементыЗапроса</DataPath>
 							<RowPictureDataPath>ЭлементыЗапроса.DefaultPicture</RowPictureDataPath>
+							<CommandSet>
+								<ExcludedCommand>ChangeHistory</ExcludedCommand>
+							</CommandSet>
 							<AutoRefresh>false</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
@@ -193,14 +198,17 @@
 								<ContextMenu name="ЭлементыЗапросаУправлениеПоискомКонтекстноеМеню" id="66"/>
 								<ExtendedTooltip name="ЭлементыЗапросаУправлениеПоискомРасширеннаяПодсказка" id="67"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ЭлементыЗапросаВыбор</Event>
+							</Events>
 							<ChildItems>
 								<LabelField name="ЭлементовЗапросаНаименование" id="68">
-									<DataPath>ЭлементыЗапроса.Наименование</DataPath>
+									<DataPath>ЭлементыЗапроса.Description</DataPath>
 									<ContextMenu name="ЭлементовЗапросаНаименованиеКонтекстноеМеню" id="69"/>
 									<ExtendedTooltip name="ЭлементовЗапросаНаименованиеРасширеннаяПодсказка" id="70"/>
 								</LabelField>
 								<LabelField name="ЭлементовЗапросаКод" id="71">
-									<DataPath>ЭлементыЗапроса.Код</DataPath>
+									<DataPath>ЭлементыЗапроса.Code</DataPath>
 									<Visible>false</Visible>
 									<ContextMenu name="ЭлементовЗапросаКодКонтекстноеМеню" id="72"/>
 									<ExtendedTooltip name="ЭлементовЗапросаКодРасширеннаяПодсказка" id="73"/>
@@ -370,24 +378,8 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>true</ManualQuery>
+				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
-				<QueryText>ВЫБРАТЬ
-	СправочникСписокЭлементовЗапроса.Ссылка КАК Ссылка,
-	СправочникСписокЭлементовЗапроса.ПометкаУдаления КАК ПометкаУдаления,
-	СправочникСписокЭлементовЗапроса.Родитель КАК Родитель,
-	СправочникСписокЭлементовЗапроса.Код КАК Код,
-	СправочникСписокЭлементовЗапроса.Наименование КАК Наименование,
-	СправочникСписокЭлементовЗапроса.Описание КАК Описание,
-	СправочникСписокЭлементовЗапроса.ТипМодели КАК ТипМодели,
-	СправочникСписокЭлементовЗапроса.Тип КАК Тип,
-	СправочникСписокЭлементовЗапроса.Спецификация КАК Спецификация,
-	СправочникСписокЭлементовЗапроса.Предопределенный КАК Предопределенный,
-	СправочникСписокЭлементовЗапроса.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных
-ИЗ
-	Справочник.СписокЭлементовЗапроса КАК СправочникСписокЭлементовЗапроса
-ГДЕ
-	СправочникСписокЭлементовЗапроса.Родитель.Наименование &lt;&gt; "SCALARS"</QueryText>
 				<MainTable>Catalog.СписокЭлементовЗапроса</MainTable>
 				<ListSettings>
 					<dcsset:filter>
