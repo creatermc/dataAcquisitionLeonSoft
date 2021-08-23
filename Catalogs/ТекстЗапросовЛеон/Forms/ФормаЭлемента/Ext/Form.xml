@@ -143,7 +143,7 @@
 							<Representation>Tree</Representation>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
-							<SelectionMode>SingleRow</SelectionMode>
+							<MultipleChoice>true</MultipleChoice>
 							<RowSelectionMode>Row</RowSelectionMode>
 							<Header>false</Header>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
@@ -241,29 +241,7 @@
 						</Table>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="ГруппаФорматированногоДокументаЗапроса" id="93">
-					<Visible>false</Visible>
-					<Group>Vertical</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаФорматированногоДокументаЗапросаРасширеннаяПодсказка" id="94"/>
-					<ChildItems>
-						<CommandBar name="ГруппаКоманднаяПанельФормДокаЗапроса" id="91">
-							<CommandSource>Item.ДокументЗапроса</CommandSource>
-							<ExtendedTooltip name="ГруппаКоманднаяПанельФормДокаЗапросаРасширеннаяПодсказка" id="92"/>
-						</CommandBar>
-						<FormattedDocumentField name="ДокументЗапроса" id="88">
-							<DataPath>ДокументЗапроса</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
-							<Output>Enable</Output>
-							<ContextMenu name="ДокументЗапросаКонтекстноеМеню" id="89"/>
-							<ExtendedTooltip name="ДокументЗапросаРасширеннаяПодсказка" id="90"/>
-						</FormattedDocumentField>
-					</ChildItems>
-				</UsualGroup>
 				<UsualGroup name="ГруппаИскходногоТекстаЗапроса" id="27">
-					<Visible>false</Visible>
 					<Group>AlwaysHorizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
@@ -332,6 +310,27 @@
 								</LabelDecoration>
 							</ChildItems>
 						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаФорматированногоДокументаЗапроса" id="93">
+					<Visible>false</Visible>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаФорматированногоДокументаЗапросаРасширеннаяПодсказка" id="94"/>
+					<ChildItems>
+						<CommandBar name="ГруппаКоманднаяПанельФормДокаЗапроса" id="91">
+							<CommandSource>Item.ДокументЗапроса</CommandSource>
+							<ExtendedTooltip name="ГруппаКоманднаяПанельФормДокаЗапросаРасширеннаяПодсказка" id="92"/>
+						</CommandBar>
+						<FormattedDocumentField name="ДокументЗапроса" id="88">
+							<DataPath>ДокументЗапроса</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+							<Output>Enable</Output>
+							<ContextMenu name="ДокументЗапросаКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="ДокументЗапросаРасширеннаяПодсказка" id="90"/>
+						</FormattedDocumentField>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
