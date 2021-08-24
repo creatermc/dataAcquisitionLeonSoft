@@ -242,6 +242,7 @@
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаИскходногоТекстаЗапроса" id="27">
+					<Visible>false</Visible>
 					<Group>AlwaysHorizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
@@ -313,7 +314,6 @@
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаФорматированногоДокументаЗапроса" id="93">
-					<Visible>false</Visible>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
