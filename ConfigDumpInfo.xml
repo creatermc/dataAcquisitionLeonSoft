@@ -40,8 +40,8 @@
 		</Metadata>
 		<Metadata name="Catalog.ТекстЗапросовЛеон.Form.ФормаСписка" id="bcfbd1e4-f8f0-11eb-7e9b-b42e9905bfa2" configVersion="46205a7451ffeb11dd84b42e9905bfa200000000"/>
 		<Metadata name="Catalog.ТекстЗапросовЛеон.Form.ФормаСписка.Form" id="bcfbd1e4-f8f0-11eb-7e9b-b42e9905bfa2.0" configVersion="8aff597451ffeb11dd84b42e9905bfa200000000"/>
-		<Metadata name="Catalog.ТекстЗапросовЛеон.Form.ФормаЭлемента" id="db6df4c8-f539-11eb-a88c-b42e9905bfa2" configVersion="2e6a889a8d05ec11828bb42e9905bfa200000000"/>
-		<Metadata name="Catalog.ТекстЗапросовЛеон.Form.ФормаЭлемента.Form" id="db6df4c8-f539-11eb-a88c-b42e9905bfa2.0" configVersion="e2f2879a8d05ec11828bb42e9905bfa200000000"/>
+		<Metadata name="Catalog.ТекстЗапросовЛеон.Form.ФормаЭлемента" id="db6df4c8-f539-11eb-a88c-b42e9905bfa2" configVersion="9ed0091f9805ec11828bb42e9905bfa200000000"/>
+		<Metadata name="Catalog.ТекстЗапросовЛеон.Form.ФормаЭлемента.Form" id="db6df4c8-f539-11eb-a88c-b42e9905bfa2.0" configVersion="7c8e091f9805ec11828bb42e9905bfa200000000"/>
 		<Metadata name="CommonForm.ПодробныеДанные" id="7553350c-fe91-11eb-c691-b42e9905bfa2" configVersion="80199095e800ec11828bb42e9905bfa200000000"/>
 		<Metadata name="CommonForm.ПодробныеДанные.Form" id="7553350c-fe91-11eb-c691-b42e9905bfa2.0" configVersion="1ee08f95e800ec11828bb42e9905bfa200000000"/>
 		<Metadata name="CommonForm.ФормаРезультатЗапроса" id="76135d22-f9e7-11eb-c691-b42e9905bfa2" configVersion="0009c9bce600ec11828bb42e9905bfa200000000"/>

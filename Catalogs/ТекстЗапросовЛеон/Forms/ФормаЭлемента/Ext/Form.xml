@@ -41,6 +41,16 @@
 							<CommandName>Form.Command.ОтобразитьГрафСхему</CommandName>
 							<ExtendedTooltip name="ФормаОтобразитьГрафСхемуРасширеннаяПодсказка" id="107"/>
 						</Button>
+						<Button name="ФормаПолучитьВыделение" id="119">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ПолучитьВыделение</CommandName>
+							<ExtendedTooltip name="ФормаПолучитьВыделениеРасширеннаяПодсказка" id="120"/>
+						</Button>
+						<Button name="ФормаУстановитьВыделение" id="121">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.УстановитьВыделение</CommandName>
+							<ExtendedTooltip name="ФормаУстановитьВыделениеРасширеннаяПодсказка" id="122"/>
+						</Button>
 					</ChildItems>
 				</CommandBar>
 			</ChildItems>
@@ -620,6 +630,36 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ОтобразитьГрафСхему</Action>
+		</Command>
+		<Command name="ПолучитьВыделение" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить выделение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить выделение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьВыделение</Action>
+		</Command>
+		<Command name="УстановитьВыделение" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить выделение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить выделение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьВыделение</Action>
 		</Command>
 	</Commands>
 </Form>
